@@ -1,0 +1,34 @@
+@use "../mixins/" as *;
+@use "../presets/" as *;
+
+.footer {
+    &__container {
+        @extend %container;
+        display: flex;
+        flex-direction: column;
+        gap: $gap-sm;
+        margin-bottom: $gap;
+    }
+}
+.footer-top {
+    display: flex;
+    gap: $gap-sm;
+
+    &__item {
+        width: 25%;
+        height: fit-content;
+    }
+}
+.footer-bottom {    
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            margin: 0;
+            text-align: center;
+            width: 300px;
+        }
+    }
+}

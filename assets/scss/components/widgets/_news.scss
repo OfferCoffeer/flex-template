@@ -1,0 +1,55 @@
+@use "../../mixins/" as *;
+@use "../../presets/" as *;
+
+.widget-news {
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 15px 7.5px 15px;
+        margin: 0 -15px 7.5px -15px;
+        transition: background .5s;
+
+        &:hover {
+            background: radial-gradient(ellipse at center, rgba($color-dark, .65) 0%, rgba($color-dark, 0) 100%);
+
+            .widget-news__title {
+                @include text-shadow;
+                color: $color-accent-dark;
+            }
+
+            .widget-news__image img {
+                transform: scale(1.2);
+            }
+
+            .widget-news__description {
+                color: $color-light;
+            }
+        }
+    }
+    &__title {
+        @include text-shortener;
+        width: 100%;
+        margin: 0 0 10px;
+        transition: color .5s;
+    }
+    &__image {
+        width: 75px;
+        height: 75px;
+        border-radius: 4px;
+        overflow: hidden;
+        
+        img {
+            width: 100%;
+            transition: transform .5s;
+        }
+    }
+    &__description {
+        @include block-shortener;
+        width: calc(100% - 75px);
+        font-size: 0.9285em;
+        line-height: 1.357em;
+        padding-left: 10px;
+        transition: color .5s;
+    }
+}
+

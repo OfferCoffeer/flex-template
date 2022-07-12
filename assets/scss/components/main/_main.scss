@@ -1,0 +1,16 @@
+@use "../../mixins/" as *;
+@use "../../presets/" as *;
+
+.wrapper {
+    &__container {
+        @extend %container;
+        display: flex;
+        gap: $gap;
+        margin-bottom: $gap;
+    }
+}
+
+.main {
+    width: 100%;
+}
+

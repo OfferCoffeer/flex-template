@@ -1,0 +1,23 @@
+@use "../libs/normalize.css/normalize.scss";
+
+@use "common/classes";
+@use "common/typography";
+
+@use "components/header/header";
+@use "components/header/header-logo";
+@use "components/header/header-menu";
+
+@use "components/main/main";
+@use "components/main/main-content";
+@use "components/main/main-breadcrumb";
+@use "components/main/main-content-item";
+
+@use "components/aside/left";
+@use "components/aside/right";
+
+@use "components/widgets/widgets";
+@use "components/widgets/search";
+@use "components/widgets/categories";
+@use "components/widgets/news";
+
+@use "components/footer";

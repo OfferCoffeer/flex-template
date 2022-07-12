@@ -1,0 +1,21 @@
+@use "../../mixins/" as *;
+@use "../../presets/" as *;
+
+.widget-category {
+    &__list {
+        @include unlist;
+    }
+    &__link {
+        display: block;
+        padding: 5px 0;
+        border-radius: 4px;
+        transition: padding-left .5s;
+        
+        &:hover {
+            @include text-shadow;
+            color: $color-accent;
+            background: rgba($color-dark, 0.5);
+            padding-left: 10px;
+        }
+    }
+}

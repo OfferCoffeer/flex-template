@@ -1,0 +1,14 @@
+@use "../../mixins/" as *;
+@use "../../presets/" as *;
+
+.main-content {
+    &__body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: $gap-sm;
+        margin: 0 -7.5px 0 -7.5px;
+        padding-bottom: 7.5px;
+    }
+}
+

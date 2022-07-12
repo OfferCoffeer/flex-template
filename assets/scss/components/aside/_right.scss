@@ -1,0 +1,9 @@
+@use "../../mixins/" as *;
+@use "../../presets/" as *;
+
+
+.right {
+    display: flex;
+    flex-direction: column;
+    max-width: $right-sidebar-width;
+}

@@ -1,0 +1,34 @@
+@use "../../mixins/" as *;
+@use "../../presets/" as *;
+
+.header-menu {
+    @include bg-color(0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2px -15px -15px -15px;
+
+    &__list {
+        @include unlist;
+        display: flex;
+        align-items: center;
+    }
+    &__link {
+        display: block;
+        border-radius: 4px;
+        margin: 5px;
+        padding: 10px 15px;
+        
+        &:hover:not(.header-menu__link--active),
+        &:focus:not(.header-menu__link--active) {
+            @include text-shadow; 
+            @include bg-color(0.4);
+            color: $color-accent;
+        }
+    }
+    &__link--active {
+        @include bg-color(0.4);
+        @include text-shadow;
+        color: $color-accent-dark;
+    }
+}

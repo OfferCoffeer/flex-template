@@ -1,0 +1,17 @@
+@use "../../mixins/" as *;
+@use "../../presets/" as *;
+
+.header {
+    &__container {
+        @extend %container;
+        margin-bottom: $gap;
+    }
+    &__content {
+        @include bg-color;
+        display: flex;
+        flex-direction: column;
+        padding: $gap-sm;
+        border-radius: 0 0 7px 7px;
+        overflow: hidden;
+    }
+}

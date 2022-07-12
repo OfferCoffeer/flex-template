@@ -1,0 +1,14 @@
+@use "../mixins/" as *;
+@use "../presets/" as *;
+
+.widget {
+    @include bg-color;
+    padding: $gap-sm;
+    border-radius: 7px;
+    color: $color-gray;
+
+    p {
+        line-height: 2em;
+        margin-bottom: 0;
+    }
+}
