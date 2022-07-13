@@ -5,7 +5,12 @@
     position: relative;
     border: 5px solid rgba($color-dark, 0.5);
     border-radius: 7px;
-    flex: 0 0 calc(100%/3 - $gap-sm);
+    @include sm-min {
+        flex: 0 0 calc(100%/3 - $gap-sm);
+    }
+    @include sm-xx {
+        flex: 0 0 calc(100%/2 - $gap-sm);
+    }
     overflow: hidden;
 
     &:hover {
@@ -31,6 +36,7 @@
         letter-spacing: 0.0714em;
         transition: background .5s;
         font-weight: 300;
+        width: 100%;
     }
     &__image {
         display: flex;

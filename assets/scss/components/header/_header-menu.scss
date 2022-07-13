@@ -10,13 +10,33 @@
 
     &__list {
         @include unlist;
-        display: flex;
-        align-items: center;
+        text-align: center;
+        width: 100%;
+        @include sm-min {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        @include sm {
+            display: none;
+        }
     }
+    &__list--active {
+        @include sm {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    
     &__link {
         display: block;
         border-radius: 4px;
         margin: 5px;
+        @include sm {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
         padding: 10px 15px;
         
         &:hover:not(.header-menu__link--active),
@@ -30,5 +50,60 @@
         @include bg-color(0.4);
         @include text-shadow;
         color: $color-accent-dark;
+    }
+    &__btn {
+        display: flex;
+        width: 30px;
+        height: 22.5px;
+        position: relative;
+        margin: 15px auto;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+        @include sm-min {
+            display: none;
+        }
+    }
+}
+
+.header-menu__btn-row {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background-color: $color-light;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+
+    &:nth-child(1) {
+        top: 0px;
+    }
+    &:nth-child(2),
+    &:nth-child(3) {
+        top: 9px;
+    }
+    &:nth-child(4) {
+        top: 18px;
+    }
+}  
+.header-menu__btn--active span {
+    &:nth-child(1) {
+        top: 9px;
+        width: 0%;
+        left: 50%;
+    }
+    &:nth-child(2) {
+        transform: rotate(45deg);
+    }  
+    &:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+    &:nth-child(4) {
+        top: 9px;
+        width: 0%;
+        left: 50%;
     }
 }

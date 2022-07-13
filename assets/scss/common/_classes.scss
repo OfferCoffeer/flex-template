@@ -1,6 +1,19 @@
 @use "../mixins/" as *;
 @use "../presets/" as *;
 
+.container {
+    max-width: $ul;
+    margin: 0 auto;
+    @include lg-min {
+        padding-right: $gap;
+        padding-left: $gap;
+    }
+    @include lg {
+        padding-left: $gap-sm;
+        padding-right: $gap-sm;
+    }
+}
+
 .widget {
     @include bg-color;
     padding: $gap-sm;

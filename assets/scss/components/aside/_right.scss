@@ -5,5 +5,16 @@
 .right {
     display: flex;
     flex-direction: column;
-    max-width: $right-sidebar-width;
+    @include lg-min {
+        max-width: $right-sidebar-width;
+    }
+    @include lg-md {
+        width: 100%;
+    }
+    @include md-xs {
+        width: calc(50% - 7.5px);
+    }
+    @include xs {
+        width: 100%;
+    } 
 }

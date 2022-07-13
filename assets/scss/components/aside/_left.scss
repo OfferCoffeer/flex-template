@@ -5,6 +5,17 @@
     display: flex;
     flex-direction: column;
     gap: $gap-sm;
-    max-width: $left-sidebar-width;
-    order: -1;
+    @include lg-min {
+        max-width: $left-sidebar-width;
+    }
+    @include lg-md {
+        flex: 0 0 $left-sidebar-width;
+    }
+    @include md-min {
+        order: -1;
+    }
+    @include md-xs {
+        margin-right: -15px;
+        width: calc(50% - 7.5px);
+    }
 }

@@ -2,6 +2,9 @@
 @use "../../presets/" as *;
 
 .widget-news {
+    @include xs {
+        margin-top: -$gap-sm;
+    }
     &__item {
         display: flex;
         flex-wrap: wrap;

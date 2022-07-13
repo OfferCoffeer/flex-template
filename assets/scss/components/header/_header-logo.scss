@@ -10,18 +10,37 @@
     line-height: 1.2em;
 
     &__image {
-        max-width: 400px;
-        margin-bottom: $gap;
+        @include sm-min {
+            max-width: 400px;
+            margin-bottom: $gap;
+        }
+        @include sm-xx {
+            max-width: 300px;
+            margin-bottom: $gap-sm;
+        }
+        @include xx {
+            width: 80%;
+            margin-bottom: $gap-sm;
+        }
     }
     &__title {
         margin-bottom: $gap-sm;
         font-family: $font-header;
         font-size: 2.65rem;
+        @include xs {
+            font-size: 1.5rem;
+        }
         letter-spacing: 0.113em;
         line-height: 1.2em;
     }
     &__description {
         letter-spacing: 0.2em;
-        font-weight: 700;
+        @include sm-min {
+            font-size: 1em;
+            font-weight: 700;
+        }
+        @include sm {
+            font-size: 0.875em;
+        }
     }
 }

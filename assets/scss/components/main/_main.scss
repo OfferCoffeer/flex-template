@@ -3,14 +3,27 @@
 
 .wrapper {
     &__container {
-        @extend %container;
         display: flex;
         gap: $gap;
-        margin-bottom: $gap;
+        
+        @include lg {
+            flex-wrap: wrap;
+        }
+        @include xs-min {
+            margin-bottom: $gap;
+        }
+        @include xs {
+            margin-bottom: $gap-sm;
+        }
     }
 }
 
 .main {
-    width: 100%;
+    @include lg-min {
+        width: 100%;
+    }
+    @include lg-md {
+        flex: 0 0 calc(100% - $left-sidebar-width - $gap);
+    }
 }
 

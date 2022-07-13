@@ -16,7 +16,6 @@ body {
     background-image: url(../img/global-bg.jpg);
     background-position: 50% 0;
     background-size: cover;
-    cursor: grab;
 }
 
 a {
@@ -27,6 +26,9 @@ a {
 h1 {
     font-family: $font-header;
     font-weight: 300;
+    @include xs {
+        font-size: 1rem;
+    }
     letter-spacing: 3px;
     padding: 18px 12px;
     margin: $gap 0;

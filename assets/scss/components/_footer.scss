@@ -3,7 +3,6 @@
 
 .footer {
     &__container {
-        @extend %container;
         display: flex;
         flex-direction: column;
         gap: $gap-sm;
@@ -13,9 +12,17 @@
 .footer-top {
     display: flex;
     gap: $gap-sm;
+    @include md {
+        flex-wrap: wrap;
+    }
 
     &__item {
-        width: 25%;
+        @include md-min {
+            width: 25%;
+        }
+        @include md-xs {
+            width: calc(50% - 7.5px);
+        }
         height: fit-content;
     }
 }
@@ -24,6 +31,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        overflow: hidden;
 
         h3 {
             margin: 0;

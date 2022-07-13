@@ -3,7 +3,6 @@
 
 .header {
     &__container {
-        @extend %container;
         margin-bottom: $gap;
     }
     &__content {
